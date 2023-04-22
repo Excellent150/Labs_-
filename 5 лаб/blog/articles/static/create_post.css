@@ -1,0 +1,49 @@
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff
+}
+
+input[type="text"],
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  background-color: #00000;
+  color: #444;
+}
+
+button[type="submit"] {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #148f77;
+}
+
+
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.archive img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
