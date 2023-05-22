@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Регистрация</title>
+		<link rel="stylesheet" href="{{ STATIC_URL }}/static/create_post.css">
+	</head>
+	<body>
+		<div class="archive">
+			<img src="https://www.hostnextra.com/kb/wp-content/uploads/2020/10/easy-to-install-django-on-ubuntu-20-04.jpg" alt="картинка">
+		</div>
+		<div class="content">
+			<h1>Регистрация</h1>
+			<form method="POST">
+				{% csrf_token %}
+				<div class="form-field">
+					<label for="username">Логин</label>
+					<input type="text" id="username" name="username" value="{{ form.username }}" required>
+				</div>
+				<div class="form-field">
+					<label for="mail">Почта</label>
+					<input type="text" id="mail" name="mail" value="{{ form.mail }}" required>
+				</div>
+                <div class="form-field">
+					<label for="password">Пароль</label>
+					<input type="password" id="password" name="password" value="{{ form.password }}" required>
+				</div>
+				<p class="error">{{ form.errors }}</p>
+				<button type="submit">Сохранить</button>
+			</form>
+			<a href="http://127.0.0.1:8000/"><p class="positioned"> Все статьи </p></a>
+		</div>
+	</body>
+</html>

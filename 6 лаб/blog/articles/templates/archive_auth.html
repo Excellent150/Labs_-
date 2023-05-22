@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Архив статей</title>
+		<link rel="stylesheet" href="{{ STATIC_URL }}/static/article.css">
+    </head>
+    <body>
+		<div class="header">
+			<img src="https://www.hostnextra.com/kb/wp-content/uploads/2020/10/easy-to-install-django-on-ubuntu-20-04.jpg" alt="картинка">
+		</div>
+		<div class="user">
+			<div>Пользователь: {{ user }}</div>
+			<form method="POST">
+				{% csrf_token %}
+				<button type="submit">log out</button>
+			</form>
+			<a href="http://127.0.0.1:8000/article/new"><h4 class="post-title"> Написать статью </h4></a>
+		</div>
+		<div class="archive">
+			{% for post in posts %}
+			<div class="one-post">
+				<a href="http://127.0.0.1:8000/article/{{ post.id }}"><h2 class="post-title">{{ post.title }}</h2></a>
+				<div class="article-info">
+					<div class="article-created-date">Дата: {{ post.created_date }}</div>
+					<div class="article-author">Автор: {{ post.author.username }}</div>
+				</div>
+				<p class="article-text">{{ post.get_excerpt }}</p>
+			</div>
+			{% endfor %}
+		</div>
+    </body>
+</html>

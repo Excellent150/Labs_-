@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script src="{{ STATIC_URL }}/static/js/helloworld.js"></script>
+        <title>Архив статей</title>
+		<link rel="stylesheet" href="{{ STATIC_URL }}/static/article.css">
+
+    </head>
+    <body>
+		<div class="header">
+			<img src="https://www.hostnextra.com/kb/wp-content/uploads/2020/10/easy-to-install-django-on-ubuntu-20-04.jpg" alt="картинка">
+		</div>
+		<div class="login">
+			<a href="http://127.0.0.1:8000/login"><p class="post-title"> Авторизация </p></a>
+			<a href="http://127.0.0.1:8000/register"><p class="post-title"> Регистрация </p></a>
+		</div>
+		<div class="archive">
+			{% for post in posts %}
+			<div class="one-post">
+				<button class="fold-button">Свернуть</button>
+				<a href="http://127.0.0.1:8000/article/{{ post.id }}"><h2 class="post-title">{{ post.title }}</h2></a>
+				<div class="article-info">
+					<div class="article-created-date">Дата: {{ post.created_date }}</div>
+					<div class="article-author">Автор: {{ post.author.username }}</div>
+					<p class="article-text">{{ post.get_excerpt }}</p>
+				</div>
+
+			</div>
+			{% endfor %}
+		</div>
+		<script src="{{ STATIC_URL }}/static/js/fold-post.js"></script>
+    </body>
+</html>

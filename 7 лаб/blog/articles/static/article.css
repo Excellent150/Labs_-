@@ -1,0 +1,85 @@
+body {
+    background: #1abc9c;
+	font-family: Tahoma, Arial, sans-serif;
+	color: #ffffff;
+}
+
+.positioned {
+    font-size: 17px;
+    color: #ffffff;
+    width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-text{
+	position: static;
+	font-size: 14px;
+}
+
+.header img {
+	display: block;
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.archive {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.post-title {
+	color: #ffffff;
+}
+
+.article-created-date {
+	position: absolute;
+	text-align: right;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content{
+	font-size: 20px;
+}
+
+.login{
+    position: absolute;
+    top: 0;
+    float: right;
+    right: 20px;
+    font-size: 19px;
+    color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user{
+    position: absolute;
+    top: 0;
+    float: right;
+    right: 100px;
+    font-size: 19px;
+    color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;;
+}
+
+.fold-button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    position: absolute;
+	text-align: right;
+	right: 100px
+}
+
+.one-post.folded .article-info{
+    display: none;
+}
+
+
